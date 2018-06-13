@@ -5,5 +5,5 @@ require 'logger.php';
 
 $obj=new logger();
 $message='new line';
-$filename="log1.txt";
+$filename="log2.txt";
 $obj->log($message, $filename);

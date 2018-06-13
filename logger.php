@@ -6,11 +6,10 @@ require "inter.php";
 
 class logger implements ILogger
 {
-    public function log(string $message)
+    public function log(string $message, string $filename)
     {
-        $file = 'log.txt';
-        $newmsg=file_get_contents($file);
+        $newmsg=file_get_contents($filename);
         $newmsg .= $message.PHP_EOL;
-        file_put_contents($file, $newmsg);
+        file_put_contents($filename, $newmsg);
     }
 }
