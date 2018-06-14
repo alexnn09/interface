@@ -1,5 +1,5 @@
 # Logger
-Для создания log файла необходимо вызвать $msg=new logger\message('$text','$output', '$channel');
+Для создания log файла необходимо создать объект $obj=new log() и вызвать $obj->log('$text','$output', '$channel');
 
 
 Где:
