@@ -1,5 +1,8 @@
 <?php
+use log\log;
+require 'logger.php';
 
 $message='new line';
 $filename="console";
-$obj=new log\logger\message($message,$filename);
+$obj=new log();
+$obj->log($message, $filename);

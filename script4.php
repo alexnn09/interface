@@ -1,3 +1,6 @@
 <?php
+use log\log;
+require 'logger.php';
 
-$obj=new log\logger\message('test text','slack' );
+$obj=new log();
+$obj->log('test message', 'slack');

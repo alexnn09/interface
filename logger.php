@@ -1,12 +1,15 @@
 <?php
-namespace log\logger;
+
+namespace log;
 require "inter.php";
 use Maknz\Slack\Client;
 require_once 'vendor/autoload.php';
 
-class message
+
+class log implements ILogger
 {
-    public function __construct(string $message, string $filename, string $cname="#random"){
+
+    public function log(string $message, string $filename, string $cname='#dev'){
         {   if($filename=='console') {
             echo "log :".$message;
         } elseif ($filename=='slack')
@@ -14,7 +17,7 @@ class message
             $url="https://hooks.slack.com/services/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";
             $client= new Client($url);
             $msg=$client->createMessage();
-            $msg->to('#random')->send($message);
+            $msg->to($cname)->send($message);
 
 
         }
