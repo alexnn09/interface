@@ -4,5 +4,5 @@ namespace log;
 
 interface ILogger
 {
-    public function log(string $message, string $filename);
+    public function log(string $message, string $filename, string $cname='#random');
 }

@@ -6,7 +6,7 @@ require_once 'vendor/autoload.php';
 
 class message
 {
-    public function __construct(string $message, string $filename){
+    public function __construct(string $message, string $filename, string $cname="#random"){
         {   if($filename=='console') {
             echo "log :".$message;
         } elseif ($filename=='slack')
