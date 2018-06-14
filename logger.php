@@ -6,7 +6,7 @@ use Maknz\Slack\Client;
 require_once 'vendor/autoload.php';
 
 
-class log implements ILogger
+class logger implements ILogger
 {
 
     public function log(string $message, string $filename, string $cname='#dev'){

@@ -1,10 +1,10 @@
 <?php
-use log\log;
+use log\logger;
 require 'logger.php';
 
 
 
 $message='new line';
 $filename="log1.txt";
-$obj=new log();
+$obj=new logger();
 $obj->log($message, $filename);
