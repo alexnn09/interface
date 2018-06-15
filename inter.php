@@ -10,6 +10,6 @@ interface IAdapter
 
 interface ILogger
 {
-    public function __consuct(IAdapter $adapter);
-    public function log(string $message);
+    public function __construct(IAdapter $adapter);
+    public function logger(string $message);
 }
