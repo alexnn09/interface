@@ -21,6 +21,14 @@ class logger implements ILogger
 
 
         }
+        elseif ($filename=='db'){
+            $connectdb=mysqli_connect('127.0.0.1','developer','developer','logs');
+
+            $query='insert into logs.logss(time, log) VALUES ('.time().',"'.$message.'")';
+            mysqli_query($connectdb, $query);
+
+
+        }
         else {
             $newmsg=file_get_contents($filename);
             $newmsg .= $message.PHP_EOL;
