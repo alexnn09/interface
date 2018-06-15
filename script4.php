@@ -2,5 +2,9 @@
 use log\logger;
 require 'logger.php';
 
-$obj=new logger();
-$obj->log('test message', 'slack');
+
+
+$adapter = new \log\slackAdapter();
+$adapter->configure(array('hook' => 'https://hooks.slack.com/services/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', 'cname' => '#dev'));
+$logger = new logger($adapter);
+$logger->logger('one');

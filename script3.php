@@ -2,7 +2,8 @@
 use log\logger;
 require 'logger.php';
 
-$message='new line';
-$filename="console";
-$obj=new logger();
-$obj->log($message, $filename);
+
+
+$adapter = new \log\consoleAdapter();
+$logger = new logger($adapter);
+$logger->logger('one');
