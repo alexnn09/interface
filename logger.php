@@ -14,7 +14,7 @@ class logger implements ILogger
             echo "log :".$message;
         } elseif ($filename=='slack')
         {
-            $url="https://hooks.slack.com/services/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";
+            $url="https://hooks.slack.com/services/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";
             $client= new Client($url);
             $msg=$client->createMessage();
             $msg->to($cname)->send($message);
