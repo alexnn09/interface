@@ -89,8 +89,3 @@ class logger implements ILogger
     }
 
 }
-
-$adapter = new fileAdapter();
-$adapter->configure(array('filename' => 'loggie.txt'));
-$logger=new logger($adapter);
-$logger->logger('test message');
