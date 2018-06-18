@@ -8,6 +8,7 @@ require_once __DIR__.'/../src/Controller/DbLoggerAdapter.php';
 require_once __DIR__.'/../src/Controller/ConsoleLoggerAdapter.php';
 require_once __DIR__.'/../src/Controller/SlackLoggerAdapter.php';
 require_once __DIR__.'/../src/Logger/LoggerController.php';
+require_once __DIR__.'/../src/Controller/LoggerInterface.php';
 
 
 return ComposerAutoloaderInit19aba9a5d54c4942581c4821ab764d7c::getLoader();

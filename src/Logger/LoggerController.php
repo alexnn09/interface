@@ -3,7 +3,7 @@
 namespace controller;
 use inter\IAdapter;
 use inter\ILogger;
-
+require __DIR__.'/../../vendor/autoload.php';
 
 
 

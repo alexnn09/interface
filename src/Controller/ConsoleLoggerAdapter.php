@@ -1,7 +1,7 @@
 <?php
 namespace adapters;
 use inter\IAdapter;
-require 'LoggerInterface.php';
+require __DIR__.'/../../vendor/autoload.php';
 
 class ConsoleLoggerAdapter implements IAdapter
 {
