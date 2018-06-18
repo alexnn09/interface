@@ -1,7 +1,6 @@
 <?php
 
 namespace controller;
-use Maknz\Slack\Client;
 use inter\IAdapter;
 use inter\ILogger;
 require 'LoggerInterface.php';

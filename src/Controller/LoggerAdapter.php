@@ -1,6 +1,6 @@
 <?php
 namespace Adapter;
-
+use GuzzleHttp\Exception\ClientException;
 use Maknz\Slack\Client;
 use inter\IAdapter;
 
@@ -30,9 +30,16 @@ class slackAdapter implements IAdapter
 
     public function write(string $message)
     {   $options=$this->options;
-        $client= new Client($options['hook']);
-        $msg=$client->createMessage();
-        $msg->to($options['cname'])->send($message);
+        try {
+            $client= new Client($options['hook']);
+            $msg=$client->createMessage();
+            $msg->to($options['cname'])->send($message);
+        }
+        catch (ClientException $e)
+        {
+            echo 'Задан неверный Hook';
+        }
+
     }
 }
 
@@ -48,9 +55,14 @@ class dbAdapter implements IAdapter
     public function write(string $message)
     {
         $options=$this->options;
-        $connectdb=mysqli_connect($options['host'],$options['user'],$options['password'],'logs');
-        $query='insert into logs.logss(time, log) VALUES ('.time().',"'.$message.'")';
-        mysqli_query($connectdb, $query);
+        $connectdb=mysqli_connect($options['host'], $options['login'], $options['password'],'logs');
+        if ( !$connectdb ) {
+            echo'Подключится к базе данным с данными host: '.$options['host'].' пользователем '.$options['login'].' и паролем '.$options['password'].PHP_EOL;
+        } else
+            mysqli_close($connectdb);
+            $query = 'insert into logs.logss(time, log) VALUES (' . time() . ',"' . $message . '")';
+            mysqli_query($connectdb, $query);
+
     }
 }
 
