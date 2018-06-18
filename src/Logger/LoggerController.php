@@ -3,8 +3,8 @@
 namespace controller;
 use inter\IAdapter;
 use inter\ILogger;
-require 'LoggerInterface.php';
-require 'LoggerAdapter.php';
+
+
 
 
 
