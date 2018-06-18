@@ -2,7 +2,7 @@
 
 use controller\Logger;
 use adapters\ConsoleLoggerAdapter;
-
+require '../vendor/autoload.php';
 
 
 

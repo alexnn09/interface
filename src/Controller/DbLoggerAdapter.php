@@ -1,7 +1,8 @@
 <?php
 namespace adapters;
 use inter\IAdapter;
-require __DIR__.'/../../vendor/autoload.php';
+require_once __DIR__.'/../../vendor/autoload.php';
+
 
 class DbLoggerAdapter implements IAdapter
 {

@@ -1,7 +1,16 @@
 {
+  "autoload": {
+    "classmap": [
+      "src/Controller/DbLoggerAdapter.php",
+      "src/Controller/LoggerInterface.php",
+      "src/Controller/SlackLoggerAdapter.php",
+      "src/Controller/FileLoggerAdapter.php",
+      "src/Controller/ConsoleLoggerAdapter.php"
+    ],
+    "files": ["src/Logger/LoggerController.php"]
+  },
     "require": {
         "maknz/slack": "^1.7",
 		"guzzle/guzzle": "3.*"
     }
-
 }

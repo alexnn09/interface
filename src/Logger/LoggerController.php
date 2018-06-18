@@ -3,10 +3,7 @@
 namespace controller;
 use inter\IAdapter;
 use inter\ILogger;
-require __DIR__.'/../../vendor/autoload.php';
-
-
-
+require_once __DIR__.'/../../vendor/autoload.php';
 
 
 class logger implements ILogger
