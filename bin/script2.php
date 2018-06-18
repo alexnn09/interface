@@ -1,12 +1,11 @@
 <?php
 use controller\Logger;
-use adapters\FileAdapter;
-require '../src/Controller/FileLoggerAdapter.php';
-require '../src/Logger/LoggerController.php';
+use adapters\FileLoggerAdapter;
+require '../vendor/autoload.php';
 
 
 
-$adapter = new FileAdapter();
+$adapter = new FileLoggerAdapter();
 $adapter->configure(array('filename' => 'log.txt'));
 $logger = new Logger($adapter);
 $logger->logger('one');

@@ -1,12 +1,11 @@
 <?php
 
 use controller\Logger;
-use adapters\ConsoleAdapter;
-require '../src/Controller/ConsoleLoggerAdapter.php';
-require '../src/Logger/LoggerController.php';
+use adapters\ConsoleLoggerAdapter;
 
 
 
-$adapter = new ConsoleAdapter();
+
+$adapter = new ConsoleLoggerAdapter();
 $logger = new Logger($adapter);
 $logger->logger('one');

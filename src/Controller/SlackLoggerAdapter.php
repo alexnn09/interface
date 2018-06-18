@@ -5,7 +5,7 @@ use GuzzleHttp\Exception\ClientException;
 use Maknz\Slack\Client;
 require 'LoggerInterface.php';
 
-class SlackAdapter implements IAdapter
+class SlackLoggerAdapter implements IAdapter
 {
     private $options;
 

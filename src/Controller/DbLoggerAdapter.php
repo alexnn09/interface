@@ -3,7 +3,7 @@ namespace adapters;
 use inter\IAdapter;
 require 'LoggerInterface.php';
 
-class DbAdapter implements IAdapter
+class DbLoggerAdapter implements IAdapter
 {
     private $options;
 

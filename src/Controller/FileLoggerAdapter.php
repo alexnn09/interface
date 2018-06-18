@@ -6,7 +6,7 @@ require 'LoggerInterface.php';
 
 
 
-class FileAdapter implements IAdapter
+class FileLoggerAdapter implements IAdapter
 {
     private $options;
 

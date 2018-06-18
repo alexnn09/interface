@@ -3,7 +3,7 @@ namespace adapters;
 use inter\IAdapter;
 require 'LoggerInterface.php';
 
-class ConsoleAdapter implements IAdapter
+class ConsoleLoggerAdapter implements IAdapter
 {
     private $options;
 
