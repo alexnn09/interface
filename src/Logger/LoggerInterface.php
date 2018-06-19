@@ -1,6 +1,6 @@
 <?php
 
-namespace inter;
+namespace App\Inter;
 
 interface IAdapter
 {

@@ -1,9 +1,9 @@
 <?php
-namespace adapters;
-use inter\IAdapter;
+namespace App\Adapters;
+use App\Inter\IAdapter;
 use GuzzleHttp\Exception\ClientException;
 use Maknz\Slack\Client;
-require_once __DIR__.'/../../vendor/autoload.php';
+
 
 class SlackLoggerAdapter implements IAdapter
 {

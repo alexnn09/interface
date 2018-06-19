@@ -1,6 +1,6 @@
 <?php
-use controller\Logger;
-use adapters\SlackLoggerAdapter;
+use App\Controller\Logger;
+use App\Adapters\SlackLoggerAdapter;
 require '../vendor/autoload.php';
 
 $adapter = new SlackLoggerAdapter();

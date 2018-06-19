@@ -1,7 +1,7 @@
 <?php
 
-use controller\Logger;
-use adapters\ConsoleLoggerAdapter;
+use App\Controller\Logger;
+use App\Adapters\ConsoleLoggerAdapter;
 require '../vendor/autoload.php';
 
 

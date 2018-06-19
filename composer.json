@@ -1,13 +1,9 @@
+
 {
   "autoload": {
-    "classmap": [
-      "src/Controller/DbLoggerAdapter.php",
-      "src/Controller/LoggerInterface.php",
-      "src/Controller/SlackLoggerAdapter.php",
-      "src/Controller/FileLoggerAdapter.php",
-      "src/Controller/ConsoleLoggerAdapter.php"
-    ],
-    "files": ["src/Logger/LoggerController.php"]
+    "psr-4": {
+      "App\\": "src/"
+    }
   },
     "require": {
         "maknz/slack": "^1.7",

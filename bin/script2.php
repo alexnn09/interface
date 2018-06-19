@@ -1,6 +1,6 @@
 <?php
-use controller\Logger;
-use adapters\FileLoggerAdapter;
+use App\Controller\Logger;
+use App\Adapters\FileLoggerAdapter;
 require '../vendor/autoload.php';
 
 

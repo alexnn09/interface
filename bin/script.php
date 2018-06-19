@@ -1,7 +1,7 @@
 <?php
-use controller\Logger;
-use adapters\FileLoggerAdapter;
-require '../vendor/autoload.php';
+use App\Controller\Logger;
+use App\Adapters\FileLoggerAdapter;
+require_once __DIR__.'/../vendor/autoload.php';
 
 
 

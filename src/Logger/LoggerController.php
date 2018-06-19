@@ -1,12 +1,11 @@
 <?php
 
-namespace controller;
-use inter\IAdapter;
-use inter\ILogger;
-require_once __DIR__.'/../../vendor/autoload.php';
+namespace App\Controller;
+use App\Inter\IAdapter;
+use App\Inter\ILogger;
 
 
-class logger implements ILogger
+class Logger implements ILogger
 {
     private $adapter;
 

@@ -1,6 +1,6 @@
 <?php
-use controller\Logger;
-use adapters\DbLoggerAdapter;
+use App\Controller\Logger;
+use App\Adapters\DbLoggerAdapter;
 require '../vendor/autoload.php';
 
 $adapter = new DbLoggerAdapter();
